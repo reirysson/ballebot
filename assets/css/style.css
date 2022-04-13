@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+body {
+    background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.logo-ballebot {
+    width: 72px;
+}
+
+.menu-cabecalho {
+    display: flex;
+    gap: 32px;
+}
+
+.menu-cabecalho-item {
+    font-family: 'Sarala', sans-serif;
+    color: #FFF2E7;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.conteudo {
+    border-top: 0.4px solid #FFF2E7;
+    margin-bottom: 48px;
+}
+
+.primeiro-conteudo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
