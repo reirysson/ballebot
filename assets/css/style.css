@@ -3,6 +3,7 @@
 :root {
    --cor-branco-claro: #FFF2E7; 
    --cor-branco-meio-claro: #ECD6C4;
+   --cor-branco-mais-escuro: #b19f90;
 }
 
 /*Fazendo o reset CSS*/
@@ -16,6 +17,20 @@
 body {
     font-size: 100%;
     background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--cor-branco-meio-claro);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--cor-branco-claro);
+    border-radius: 20px;
+    border: 3px solid var(--cor-branco-mais-escuro);
 }
 
 /*Header*/
@@ -59,9 +74,25 @@ nav a:hover::after {
     width: 100%;
 }
 /*Main*/
+
 .conteudo {
     border-top: 0.4px solid var(--cor-branco-claro);
     margin-bottom: 48px;
+    animation-name: surgir;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-direction: unset;
+}
+
+@keyframes surgir {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .primeiro-conteudo {
