@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
 
+:root {
+   --cor-branco-claro: #FFF2E7; 
+   --cor-branco-meio-claro: #ECD6C4;
+}
+
 /*Fazendo o reset CSS*/
 * {
     margin: 0;
@@ -9,6 +14,7 @@
 }
 
 body {
+    font-size: 100%;
     background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
 }
 
@@ -25,21 +31,36 @@ body {
     width: 72px;
 }
 
-.menu-cabecalho {
+nav {
     display: flex;
     gap: 32px;
 }
 
-.menu-cabecalho-item {
+nav a {
     font-family: 'Sarala', sans-serif;
-    color: #FFF2E7;
+    color: var(--cor-branco-claro);
     font-weight: 400;
     font-size: 18px;
+    position: relative;
 }
 
+nav a::after {
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor-branco-meio-claro);
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
 /*Main*/
 .conteudo {
-    border-top: 0.4px solid #FFF2E7;
+    border-top: 0.4px solid var(--cor-branco-claro);
     margin-bottom: 48px;
 }
 
@@ -60,18 +81,18 @@ body {
     font-family: 'Righteous', cursive;
     font-weight: 400;
     font-size: 64px;
-    color: #FFF2E7;
+    color: var(--cor-branco-claro);
 }
 
 .descricao-primeiro-conteudo-texto {
     font-family: 'Sarala', sans-serif;
     font-weight: 400px;
     font-size: 24px;
-    color: #ECD6C4
+    color: var(--cor-branco-meio-claro);
 }
 
 .descricao-primeiro-conteudo-botao {
-    background-color: #ECD6C4;
+    background-color: var(--cor-branco-meio-claro);
     width: 185px;
     height: 67px;
     border: none;
@@ -81,10 +102,11 @@ body {
     font-weight: 400px;
     font-size: 20px;
     color: #2F2325;
+    transition: 0.3s;
 }
 
 .descricao-primeiro-conteudo-botao:hover {
-    background-color: #b9a899;
+    background-color: rgba(236, 214, 196, 0.53);
     cursor: pointer;
 }
 
@@ -101,7 +123,7 @@ body {
 }
 
 .segundo-conteudo-titulo {
-    border-top: 0.4px solid #FFF2E7;
+    border-top: 0.4px solid var(--cor-branco-claro);
     padding-top: 48px; 
     font-family: 'Righteous', cursive;
     font-weight: 400px;
@@ -114,7 +136,18 @@ body {
     font-family: 'Sarala', sans-serif;
     font-weight: 400px;
     font-size: 18px;
-    color: #ECD6C4;
+    color: var(--cor-branco-meio-claro);
+}
+
+.rodape {
+    padding: 32px;
+    border-top: 0.4px solid var(--cor-branco-claro);
+}
+
+.rodape-logo {
+    width: 15%;
+    display: block;
+    margin: 0 auto;
 }
 
 /*Footer*/
