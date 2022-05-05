@@ -33,6 +33,8 @@ body::-webkit-scrollbar-thumb {
     border: 3px solid var(--cor-branco-mais-escuro);
 }
 
+/*Tela desktop*/
+@media (min-width: 768px) {
 /*Header*/
 .cabecalho {
     display: flex;
@@ -180,4 +182,4 @@ nav a:hover::after {
     display: block;
     margin: 0 auto;
 }
-
+}
